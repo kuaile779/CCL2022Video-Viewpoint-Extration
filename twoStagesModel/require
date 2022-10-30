@@ -1,0 +1,5 @@
+pytorch==1.7.1   # 在https://pytorch.org/get-started/previous-versions/中挑选合适cuda版本的命令
+six
+boto3
+transformers==4.12.5
+

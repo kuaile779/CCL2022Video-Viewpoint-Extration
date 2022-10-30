@@ -1,0 +1,20 @@
+第一步：多跨抽取
+1.数据处理
+python pro/split_trte.py  # 划分训练集一部分进行验证，得到 new-train.jsonl 和 new-valid.jsonl
+python data_process.py
+2.训练
+python train.py
+
+第二步：摘要字符选择   （在 summary 文件夹下）
+1.数据处理
+python prepare_data.py
+
+2.训练
+python train.py
+
+3.得到最终结果
+将得到的 dev-result-{取最大的数值文件}.jsonl 文件复制到 summary/data/ 下    （在第一步得到，在 ccl-vedio/output 文件夹下）\
+修改其名称为 result.jsonl
+
+python test.py
+最终的 new_result.jsonl 是最终的结果  （在 summary 下的data文件下）
